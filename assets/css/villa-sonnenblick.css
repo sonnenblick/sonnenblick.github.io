@@ -854,12 +854,6 @@ omgeving
 .card11 {
   background-image: url(../images/omgeving/11.jpg);
 }
-.card12 {
-  background-image: url(../images/omgeving/12.jpg);
-}
-.card13 {
-  background-image: url(../images/omgeving/13.jpg);
-}
 
 #omgeving .owl-menu-item {
   position: relative;
@@ -1075,6 +1069,7 @@ contact
   margin-top: 120px;
   padding: 120px 0px;
   background-image: url(../images/contact.jpg);
+  
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
