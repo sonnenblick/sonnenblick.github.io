@@ -98,6 +98,9 @@
 		  }
 	  })
 
+	// Window Resize Mobile Menu Fix
+	mobileNav();
+
 
 	// Scroll animation init
 	window.sr = new scrollReveal();
@@ -159,7 +162,7 @@
 
 	function onScroll(event){
 	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
+	    $('.nav a[href^="#"]').each(function () {
 	        var currLink = $(this);
 	        var refElement = $(currLink.attr("href"));
 	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
@@ -190,5 +193,24 @@
 			}, 300);
 		});
 	});
+
+
+	// Window Resize Mobile Menu Fix
+	$(window).on('resize', function() {
+		mobileNav();
+	});
+
+
+	// Window Resize Mobile Menu Fix
+	function mobileNav() {
+		var width = $(window).width();
+		$('.submenu').on('click', function() {
+			if(width < 767) {
+				$('.submenu ul').removeClass('active');
+				$(this).find('ul').toggleClass('active');
+			}
+		});
+	}
+
 
 })(window.jQuery);
